@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <data>
+                <variable
+                    name="AddClientViewModel"
+                    type="com.example.clients.addclient.AddClientViewModel" />
+        </data>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".addclient.AddClientFragment">
+
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="1"
+                    android:hint="Введіть ім'я"
+                    android:text="@{AddClientViewModel.clientName}" />
+
+                <EditText
+                    android:id="@+id/surname"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_weight="1"
+                    android:hint="Введіть прізвище"
+                    android:text="@{AddClientViewModel.clientSurname}" />
+
+                <EditText
+                    android:id="@+id/third_name"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/surname"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="54dp"
+                    android:layout_weight="1"
+                    android:hint="Введіть ім'я по-батькові"
+                    android:text="@{AddClientViewModel.clientThrid_Name}" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/third_name"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="61dp"
+                    android:layout_weight="1"
+                    android:hint="Введіть номер телефону"
+                    android:inputType="phone"
+                    android:text="@{AddClientViewModel.clientPhone}" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phone"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="66dp"
+                    android:layout_weight="1"
+                    android:hint="Введіть Email"
+                    android:inputType="phone"
+                    android:text="@{AddClientViewModel.email}" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="343dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phone"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="159dp"
+                    android:text="Зберегти"
+                    tools:layout_editor_absoluteX="219dp"
+                    tools:layout_editor_absoluteY="45dp" />
+
+        </RelativeLayout>
+</layout>
